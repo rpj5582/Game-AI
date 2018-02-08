@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class IsoCamera : MonoBehaviour
 {
+    public int translationBorder = 100;
+
     public float moveSpeed = 25.0f;
+
     public float zoomMinY = 5.0f;
     public float zoomMaxY = 20.0f;
 
@@ -20,8 +23,18 @@ public class IsoCamera : MonoBehaviour
         Vector3 localForward = Vector3.ProjectOnPlane(transform.forward, Vector3.up);
         localForward.Normalize();
 
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        float h = 0;
+        float v = 0;
+        Vector2 mousePosition = Input.mousePosition;
+        if (mousePosition.x > 0 && mousePosition.x < translationBorder)
+            h = -1;
+        if (mousePosition.x < Screen.width && mousePosition.x > Screen.width - translationBorder)
+            h = 1;
+
+        if (mousePosition.y > 0 && mousePosition.y < translationBorder)
+            v = -1;
+        if (mousePosition.y < Screen.height && mousePosition.y > Screen.height - translationBorder)
+            v = 1;
 
         transform.position += localRight * h * moveSpeed * Time.deltaTime;
         transform.position += localForward * v * moveSpeed * Time.deltaTime;
