@@ -1944,8 +1944,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationBorder: 100
   moveSpeed: 25
-  zoomMinY: 5
-  zoomMaxY: 20
+  zoomMinY: 20
+  zoomMaxY: 70
 --- !u!81 &778710453
 AudioListener:
   m_ObjectHideFlags: 0
