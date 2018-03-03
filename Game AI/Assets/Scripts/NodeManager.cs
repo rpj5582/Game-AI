@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NodeManager : MonoBehaviour {
-    [SerializeField]
-    private int totalRowNodes;
+    public static int totalRowNodes = 40;
 
-    private Node[,]nodes;
+    public static Node[,]nodes;
 
     //Debugging object
     [SerializeField]
@@ -21,8 +20,15 @@ public class NodeManager : MonoBehaviour {
 
     void Awake () {
         SpawnNodes();
+        SetNodeNeighbors();
     }
     
+    private void SetNodeNeighbors() {
+        foreach(Node _node in nodes) {
+            _node.FindNeighbors();
+        }
+    }
+
     private void SpawnNodes() {
         nodes = new Node[totalRowNodes,totalRowNodes];
 
@@ -43,6 +49,7 @@ public class NodeManager : MonoBehaviour {
 
                 spawnPos = new Vector3(xPos, Terrain.activeTerrain.SampleHeight(new Vector3(xPos, 0, zPos)), zPos);
                 Node newNode = new Node(spawnPos, 0.5f, visualizationPrefab, nodeVisContainer);
+                newNode.GridPos = new Vector2(i, j);
                 nodes[i, j] = newNode;
             }
         }
