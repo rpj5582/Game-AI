@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class MCMovement : MonoBehaviour {
-	public Vector3 forward = new Vector3(1.0f, 0.0f, 0.0f); //direction the object is naturally facing
+	public Vector3 forward = new Vector3(0.0f, 0.0f, 1.0f); //direction the object is naturally facing
 	public float speed = 0.0f;
-	private float maxSpeed = 30.0f;
+	public float maxSpeed = 30.0f;
 	private float slowDown = 0.97f;
 	private float speedIncrement = 10.0f;
 

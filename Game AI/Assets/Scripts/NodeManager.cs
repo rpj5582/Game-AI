@@ -16,7 +16,7 @@ public class NodeManager : MonoBehaviour {
     private GameObject nodeVisContainer;
 
     //If false, no node visualization objects will be created
-    public static bool visualizeNodes = true;
+    public static bool visualizeNodes = false;
 
     void Awake () {
         SpawnNodes();
