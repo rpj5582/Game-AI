@@ -56,8 +56,10 @@ public class Flocker : MonoBehaviour
 
             flockDirection /= flockingColliders.Length;
 
-            // Cohesion - seek the leader
-            steeringForce += ((leader.position - transform.position).normalized * maxSpeed - rbody.velocity) * cohesionWeight;
+            // Cohesion - seek the leader based on distance
+            float distanceToLeader = Vector3.Distance(transform.position, leader.position);
+            if (distanceToLeader > flockRadius) distanceToLeader = flockRadius;
+            steeringForce += ((leader.position - transform.position).normalized * maxSpeed * distanceToLeader - rbody.velocity) * cohesionWeight;
 
             // Alignment - steer to be one with the flock
             steeringForce += (flockDirection.normalized * maxSpeed - rbody.velocity) * alignmentWeight;
