@@ -32,6 +32,49 @@ public class Flocker : MonoBehaviour
         myCollider = GetComponent<Collider>();
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Y))
+        {
+            separationWeight -= 0.5f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            separationWeight += 0.5f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            cohesionWeight -= 0.5f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            cohesionWeight += 0.5f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            alignmentWeight -= 0.5f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            alignmentWeight += 0.5f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Comma))
+        {
+            maxSpeed -= 0.5f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Period))
+        {
+            maxSpeed += 0.5f;
+        }
+    }
+
     private void FixedUpdate()
     {
         Vector3 steeringForce = Vector3.zero;
