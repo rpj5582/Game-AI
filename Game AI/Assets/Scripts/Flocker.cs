@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Flocker : MonoBehaviour
@@ -23,6 +24,9 @@ public class Flocker : MonoBehaviour
     [SerializeField]
     private float alignmentWeight;
 
+    [SerializeField]
+    private Text flockParameters;
+
     private Rigidbody rbody;
     private Collider myCollider;
 
@@ -30,6 +34,7 @@ public class Flocker : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody>();
         myCollider = GetComponent<Collider>();
+        UpdateText();
     }
 
     private void Update()
@@ -37,41 +42,49 @@ public class Flocker : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Y))
         {
             separationWeight -= 0.5f;
+            UpdateText();
         }
 
         if (Input.GetKeyDown(KeyCode.U))
         {
             separationWeight += 0.5f;
+            UpdateText();
         }
 
         if (Input.GetKeyDown(KeyCode.H))
         {
             cohesionWeight -= 0.5f;
+            UpdateText();
         }
 
         if (Input.GetKeyDown(KeyCode.J))
         {
             cohesionWeight += 0.5f;
+            UpdateText();
         }
 
         if (Input.GetKeyDown(KeyCode.N))
         {
             alignmentWeight -= 0.5f;
+            UpdateText();
         }
 
         if (Input.GetKeyDown(KeyCode.M))
         {
             alignmentWeight += 0.5f;
+            UpdateText();
         }
 
         if (Input.GetKeyDown(KeyCode.Comma))
         {
             maxSpeed -= 0.5f;
+            UpdateText();
         }
 
         if (Input.GetKeyDown(KeyCode.Period))
         {
             maxSpeed += 0.5f;
+            UpdateText();
         }
     }
 
@@ -116,5 +129,10 @@ public class Flocker : MonoBehaviour
 
         if (rbody.velocity != Vector3.zero)
             transform.forward = Vector3.RotateTowards(transform.forward, new Vector3(rbody.velocity.x, 0, rbody.velocity.z), 0.1f, 1);
+    }
+
+    private void UpdateText()
+    {
+        flockParameters.text = "Separation Weight: " + separationWeight + "\nCohesion Weight: " + cohesionWeight + "\nAlignment Weight: " + alignmentWeight + "\nMax Speed: " + maxSpeed;
     }
 }
