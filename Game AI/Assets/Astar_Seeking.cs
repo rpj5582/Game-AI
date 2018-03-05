@@ -17,7 +17,7 @@ public class Astar_Seeking : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		allNodes = new Node[1600];
+		allNodes = new Node[NodeManager.totalRowNodes * NodeManager.totalRowNodes];
 
 		int k = 0;
 		for (int i = 0; i < NodeManager.totalRowNodes; i++) 

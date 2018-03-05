@@ -12,6 +12,8 @@ public class Node {
     private GameObject visualization, visContainer;
     private NodeVisualizer nodeViz;
 
+    private bool traversable;
+
     #region Properties
     public List<Node> Neighbors {
         get {
@@ -52,6 +54,16 @@ public class Node {
             nodeViz = value;
         }
     }
+
+    public bool Traversable {
+        get {
+            return traversable;
+        }
+
+        set {
+            traversable = value;
+        }
+    }
     #endregion
 
     //Data structure for information about a node. The visulization object is just for debuggin
@@ -60,15 +72,47 @@ public class Node {
         cost = _cost;
         Neighbors = new List<Node>();
 
+        ReadjustHeightForBuildings();
+
         //Set up scripts and objects to help visualize node position and relation to other nodes
-        if(NodeManager.visualizeNodes) {
+        if (NodeManager.visualizeNodes) {
             visContainer = _visContainer;
 
             visualization = GameObject.Instantiate(_visualizationPrefab, Pos, Quaternion.identity);
             visualization.transform.parent = visContainer.transform;
             NodeViz = visualization.GetComponent<NodeVisualizer>();
-            NodeViz.myNode = this;   
+            NodeViz.myNode = this;
+            NodeViz.SetTraversable(Traversable);
         }
+    }
+
+    private void ReadjustHeightForBuildings() {
+        Traversable = true;
+
+        //Excludes all layers that are not buildings
+        int buildingLayermask = 1 << LayerMask.NameToLayer("Building");
+        int waterLayermask = 1 << LayerMask.NameToLayer("Water");
+        int layerMask = buildingLayermask | waterLayermask;
+
+        RaycastHit hit;
+        Vector3 rayStartPos = Pos + Vector3.up * 30;
+
+        //Shoot a ray downwards towards this node. If it hits anything on the building layer, move the node to that hit point
+        if (Physics.Raycast(new Ray(rayStartPos, -Vector3.up), out hit, Vector3.Distance(Pos, rayStartPos), layerMask)) {
+            Pos = hit.point;
+            Traversable = false;
+        }
+
+        #region Sphere Collider version
+        //Finds any colliders within overlap range of this node
+        /*Collider[] overlappedColliders = Physics.OverlapSphere(Pos, 0.1f, layerMask);
+
+        //Augments the node position to compensate
+        if(overlappedColliders.Length > 0) {
+            Pos += new Vector3(0, overlappedColliders[0].gameObject.GetComponent<Collider>().bounds.extents.y * 2, 0);
+        }*/
+        #endregion
+
     }
 
     public float CalculateCost() {
