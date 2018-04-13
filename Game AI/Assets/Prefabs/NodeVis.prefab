@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33046882138813188}
   - component: {fileID: 23952678003630798}
   - component: {fileID: 114877889349524628}
-  - component: {fileID: 135735470011987716}
   m_Layer: 0
   m_Name: NodeVis
   m_TagString: Node
@@ -38,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 1888985092370440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 10.27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 51, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,7 +82,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1888985092370440}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &114877889349524628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,15 +95,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoveredSizeScale: 1.5
---- !u!135 &135735470011987716
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1888985092370440}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}

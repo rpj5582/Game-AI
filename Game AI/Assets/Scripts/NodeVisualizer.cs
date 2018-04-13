@@ -17,37 +17,15 @@ public class NodeVisualizer : MonoBehaviour {
         origScale = transform.localScale;
     }
     
-    //Highlights this node and its nieghbors
-    void OnMouseEnter() {
-        if (!myNode.Traversable) return;
-        myRenderer.material.color = Color.blue;
-        transform.localScale = origScale * hoveredSizeScale;
+	//set color depending on corresponding node's current value (red, blue, grey, default to grey)
 
-        foreach(Node _neighbor in myNode.Neighbors) {
-            _neighbor.NodeViz.SetVisualizeAsNeighbor(true);
-        }
-    }
-
-    //Remove any visuals from this node and its neighbors
-    void OnMouseExit() {
-        if (!myNode.Traversable) return;
-        myRenderer.material.color = Color.white;
-        transform.localScale = origScale;
-
-        foreach (Node _neighbor in myNode.Neighbors) {
-            _neighbor.NodeViz.SetVisualizeAsNeighbor(false);
-        }
-    }
-
-    //Changes the color and scale of this node to show that it is the nieghbor of
-    //whatever node is currently moused over
-    public void SetVisualizeAsNeighbor(bool _b) {
-        if (!myNode.Traversable) return;
-        transform.localScale = _b ? origScale * hoveredSizeScale : origScale;
-        myRenderer.material.color = _b ? Color.green : Color.white;
-    }
-
-    public void SetTraversable(bool _b) {
-        myRenderer.material.color = myNode.Traversable ? Color.white : Color.red;
-    }
+	void Update(){
+		if (myNode.Value == 0) {
+			myRenderer.material.color = Color.grey;
+		} else if (myNode.Value > 0) {
+			myRenderer.material.color = Color.red;
+		} else {
+			myRenderer.material.color = Color.blue;
+		}
+	}
 }
