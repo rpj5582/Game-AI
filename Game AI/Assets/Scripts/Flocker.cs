@@ -24,11 +24,15 @@ public class Flocker : MonoBehaviour
     [SerializeField]
     private float alignmentWeight;
 
-    [SerializeField]
-    private Text flockParameters;
-
     private Rigidbody rbody;
     private Collider myCollider;
+
+    private UnitSpawn unitSpawn;
+
+    void Awake() 
+    {
+        unitSpawn = GameObject.FindGameObjectWithTag("GameManager").GetComponent<UnitSpawn>();
+    }
 
     private void Start()
     {
@@ -127,12 +131,12 @@ public class Flocker : MonoBehaviour
         rbody.velocity = new Vector3(velocity.x, rbody.velocity.y, velocity.z);
         rbody.velocity = Vector3.ClampMagnitude(rbody.velocity, maxSpeed);
 
-        if (rbody.velocity != Vector3.zero)
-            transform.forward = Vector3.RotateTowards(transform.forward, new Vector3(rbody.velocity.x, 0, rbody.velocity.z), 0.1f, 1);
+        Vector3 newVec = new Vector3(rbody.velocity.x, 0, rbody.velocity.z);
+        if (newVec != Vector3.zero)
+            transform.forward = Vector3.RotateTowards(transform.forward, newVec, 0.1f, 1);
     }
 
-    private void UpdateText()
-    {
-        flockParameters.text = "Separation Weight: " + separationWeight + "\nCohesion Weight: " + cohesionWeight + "\nAlignment Weight: " + alignmentWeight + "\nMax Speed: " + maxSpeed;
+    private void UpdateText() {
+        unitSpawn.FlockParametersText.text = "Separation Weight: " + separationWeight + "\nCohesion Weight: " + cohesionWeight + "\nAlignment Weight: " + alignmentWeight + "\nMax Speed: " + maxSpeed;
     }
-}
+ }
