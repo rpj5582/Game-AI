@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1802010762598284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69.48, y: 11.51, z: 64.28}
+  m_LocalPosition: {x: 65.91, y: 14.74, z: 75.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -141,8 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef82b3b00b650943a495a5fe5b0f8a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamMats:
-  - {fileID: 2100000, guid: 7f4275bdb89a0df47b863ef4db91d39e, type: 2}
-  - {fileID: 2100000, guid: 6186d544e82204045ae05078a2886051, type: 2}
+  strengthMats:
+  - {fileID: 2100000, guid: fe91a6403a88d1840ad0849a4d6ef70f, type: 2}
+  - {fileID: 2100000, guid: be79db19b1b723645a0c780d7b1735d9, type: 2}
+  - {fileID: 2100000, guid: 3ee47bf8d25e618498bc0c818e9b2cee, type: 2}
+  - {fileID: 2100000, guid: 282e4dbf2feb1e04d84bca9ebc8fb540, type: 2}
   teamRenderer: {fileID: 23951116591522058}
   strengthRenderer: {fileID: 0}

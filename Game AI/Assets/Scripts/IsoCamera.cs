@@ -16,7 +16,7 @@ public class IsoCamera : MonoBehaviour
 
     }
 
-    void LateUpdate()
+    void Update()
     {
         // Translational movement
         Vector3 localRight = transform.right;

@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Unit : MonoBehaviour {
-    public enum UNIT_LVL { LVL1 = 1, LVL2 = 2, LVL3 = 3, LVL4 = 4 }
+    public enum UNIT_LVL { WHITE = 1, BLUE = 2, YELLOW = 3, BLACK = 4 }
     private UNIT_LVL level;
 
     public enum TEAM { RED = 0, GREEN = 1 }
     private TEAM team;
 
     [SerializeField]
-    private Material[] teamMats;
+    private Material[] strengthMats;
 
     [SerializeField]
     private MeshRenderer teamRenderer, strengthRenderer;
+
+    private RectTransform uiElement;
 
     #region Properties
     public TEAM Team {
@@ -35,6 +37,16 @@ public class Unit : MonoBehaviour {
             level = value;
         }
     }
+
+    public RectTransform UiElement {
+        get {
+            return uiElement;
+        }
+
+        set {
+            uiElement = value;
+        }
+    }
     #endregion
 
     private void Awake() {
@@ -44,8 +56,8 @@ public class Unit : MonoBehaviour {
     public void InitUnit(TEAM _team, UNIT_LVL _lvl) {
         team = _team;
         level = _lvl;
-
+            
         //Sets the unit's materil to reflect its team. Will chnage this to an overlay or icon later
-        teamRenderer.material = teamMats[(int)_team];
+        teamRenderer.material = strengthMats[(int)_lvl - 1];
     }
 }
