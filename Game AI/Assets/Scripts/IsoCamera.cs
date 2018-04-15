@@ -20,7 +20,7 @@ public class IsoCamera : MonoBehaviour
     {
         // Translational movement
         Vector3 localRight = transform.right;
-        Vector3 localForward = Vector3.ProjectOnPlane(transform.forward, Vector3.up);
+        Vector3 localForward = /*Vector3.ProjectOnPlane(transform.forward, Vector3.up);*/transform.up;
         localForward.Normalize();
 
         float h = 0;

@@ -1153,67 +1153,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &413321571
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 69.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 11.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 71.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114139564426769998, guid: 0d4049a572c70eb44a8e5773db74cced,
-        type: 2}
-      propertyPath: flockParameters
-      value: 
-      objectReference: {fileID: 731929632}
-    - target: {fileID: 1802010762598284, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_Name
-      value: GreenLeader
-      objectReference: {fileID: 0}
-    - target: {fileID: 1802010762598284, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_TagString
-      value: GreenLeader
-      objectReference: {fileID: 0}
-    - target: {fileID: 23951116591522058, guid: 0d4049a572c70eb44a8e5773db74cced,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6186d544e82204045ae05078a2886051, type: 2}
-    m_RemovedComponents:
-    - {fileID: 114953059289266910, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &416543959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,67 +1359,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &540016050
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 69.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 11.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 64.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181461717309104, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114139564426769998, guid: 0d4049a572c70eb44a8e5773db74cced,
-        type: 2}
-      propertyPath: flockParameters
-      value: 
-      objectReference: {fileID: 731929632}
-    - target: {fileID: 1802010762598284, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_Name
-      value: RedLeader
-      objectReference: {fileID: 0}
-    - target: {fileID: 1802010762598284, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-      propertyPath: m_TagString
-      value: RedLeader
-      objectReference: {fileID: 0}
-    - target: {fileID: 23951116591522058, guid: 0d4049a572c70eb44a8e5773db74cced,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7f4275bdb89a0df47b863ef4db91d39e, type: 2}
-    m_RemovedComponents:
-    - {fileID: 114953059289266910, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 0d4049a572c70eb44a8e5773db74cced, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &545599278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1367,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 545599279}
+  - component: {fileID: 545599280}
   m_Layer: 0
   m_Name: NodeVisContainer
   m_TagString: Untagged
@@ -1509,6 +1388,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &545599280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 545599278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e6f75c8c5fda249b97862e597d54df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &567416319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,8 +1431,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 105, y: -143.8}
-  m_SizeDelta: {x: 187.2, y: 38.95}
+  m_AnchoredPosition: {x: 105, y: -68.13}
+  m_SizeDelta: {x: 187.2, y: 85.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &567416321
 MonoBehaviour:
@@ -1576,7 +1466,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Press the I key to toggle the influence map on and off. '
+  m_Text: 'Press the I key to toggle the influence map on and off.
+
+
+    Press the R key to refresh the influence map.'
 --- !u!222 &567416322
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1833,7 +1726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &731929631
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2223,13 +2116,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 778710447}
-  m_LocalRotation: {x: 0.4619401, y: 0.33141372, z: -0.191342, w: 0.80010283}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 62, y: 47.5, z: 68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 60.000004, y: 45.000004, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &778710452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3055,7 +2948,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1290759061}
   - component: {fileID: 1290759060}
-  - component: {fileID: 1290759062}
   - component: {fileID: 1290759063}
   m_Layer: 0
   m_Name: GameManager
@@ -3091,18 +2983,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1290759062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1290759059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34ce1642dbfdba34fa30d98a062dc968, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodes: {fileID: 545599278}
 --- !u!114 &1290759063
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,8 +6,7 @@ TagManager:
   tags:
   - Node
   - GameManager
-  - GreenLeader
-  - RedLeader
+  - Unit
   layers:
   - Default
   - TransparentFX

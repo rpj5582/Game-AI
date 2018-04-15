@@ -49,7 +49,7 @@ public class UnitSpawn : MonoBehaviour {
         GameObject newUnit = Instantiate(unitPrefab, _pos, Quaternion.identity);
         
         //Initializes the unit's visuals and properties
-        newUnit.GetComponent<Unit>().InitUnit(_team, Unit.UNIT_LVL.LVL1);
+        newUnit.GetComponent<Unit>().InitUnit(_team, Unit.UNIT_LVL.LVL4);
         
         //Add the unit to the correct team 
         if(_team == Unit.TEAM.RED) {
@@ -71,6 +71,19 @@ public class UnitSpawn : MonoBehaviour {
             
             if(Physics.Raycast(ray, out hit)) {
                 SpawnUnit(hit.point, Unit.TEAM.RED);
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+
+            //Find the correct location to place the unit
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                SpawnUnit(hit.point, Unit.TEAM.GREEN);
             }
         }
     }

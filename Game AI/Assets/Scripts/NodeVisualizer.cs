@@ -21,11 +21,11 @@ public class NodeVisualizer : MonoBehaviour {
 
 	void Update(){
 		if (myNode.Value == 0) {
-			myRenderer.material.color = Color.grey;
+			myRenderer.material.color = new Color(0.5f, 0.5f, 0.5f, 0.5f);
 		} else if (myNode.Value > 0) {
-			myRenderer.material.color = Color.red;
-		} else {
-			myRenderer.material.color = Color.blue;
-		}
+			myRenderer.material.color = new Color(1f, 0f, 0f, 0.5f);
+        } else {
+			myRenderer.material.color = new Color(0f, 1f, 0f, 0.5f);
+        }
 	}
 }
